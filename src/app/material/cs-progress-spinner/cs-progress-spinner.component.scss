@@ -1,0 +1,86 @@
+cs-progress-spinner {
+    // HIDE
+    .fade-out {
+        visibility: hidden;
+        opacity: 0;
+        // transition: visibility 0s 2s, opacity 2s linear;
+    } // COLORS
+    .primary {
+        &.mat-progress-spinner.mat-accent path,
+        &.mat-spinner.mat-accent path {
+            stroke: color($colors, primary);
+        }
+    }
+    .secondary {
+        &.mat-progress-spinner.mat-accent path,
+        .mat-spinner.mat-accent path {
+            stroke: color($colors, secondary);
+        }
+    }
+    .danger {
+        &.mat-progress-spinner.mat-accent path,
+        .mat-spinner.mat-accent path {
+            stroke: color($colors, danger);
+        }
+    }
+    .light {
+        &.mat-progress-spinner.mat-accent path,
+        .mat-spinner.mat-accent path {
+            stroke: color($colors, light);
+        }
+    }
+    .dark {
+        &.mat-progress-spinner.mat-accent path,
+        .mat-spinner.mat-accent path {
+            stroke: color($colors, dark);
+        }
+    }
+    .favorite {
+        &.mat-progress-spinner.mat-accent path,
+        .mat-spinner.mat-accent path {
+            stroke: color($colors, favorite);
+        }
+    }
+    .muted {
+        &.mat-progress-spinner.mat-accent path,
+        .mat-spinner.mat-accent path {
+            stroke: color($colors, muted);
+        }
+    }
+    .energized {
+        &.mat-progress-spinner.mat-accent path,
+        .mat-spinner.mat-accent path {
+            stroke: color($colors, energized);
+        }
+    }
+    .sensual {
+        &.mat-progress-spinner.mat-accent path,
+        .mat-spinner.mat-accent path {
+            stroke: color($colors, sensual);
+        }
+    }
+    .royal {
+        &.mat-progress-spinner.mat-accent path,
+        .mat-spinner.mat-accent path {
+            stroke: color($colors, royal);
+        }
+    }
+    .sobra {
+        &.mat-progress-spinner.mat-accent path,
+        .mat-spinner.mat-accent path {
+            stroke: color($colors, sobra);
+        }
+    }
+    .facebook {
+        &.mat-progress-spinner.mat-accent path,
+        .mat-spinner.mat-accent path {
+            stroke: color($colors, facebook);
+        }
+    }
+    .spring {
+        &.mat-progress-spinner.mat-accent path,
+        .mat-spinner.mat-accent path {
+            stroke: color($colors, spring);
+        }
+    }
+}

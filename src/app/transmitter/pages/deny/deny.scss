@@ -1,0 +1,19 @@
+page-deny {
+    h1 {
+        color: color($colors, sensual);
+    }
+    p {
+        color: color($colors, wolf);
+	}
+	.center{
+		text-align: center;
+	}
+	.list-md,
+	.list-ios{
+		margin-top: 50%;
+	}
+	.button-md,
+	.button-ios{
+		width: 50%;
+	}
+}

@@ -1,0 +1,25 @@
+page-transit-service {
+    .span {
+        font-weight: bold;
+    }
+    .center {
+        text-align: center;
+    }
+    .title {
+        p {
+            font-size: 2rem;
+        }
+    }
+    .details {
+        padding-left: 2rem;
+	}
+	.phone,
+	.email{
+		color: color($colors, secondary);
+	}
+	h3{
+		margin-top: 1rem;
+		margin-bottom: 0rem;
+		color: color($colors, primary);
+	}
+}

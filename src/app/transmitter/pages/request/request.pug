@@ -1,0 +1,46 @@
+ion-header
+	ion-toolbar
+		ion-buttons(left)
+			button(ion-button, icon-only, (click)="close()")
+				ion-icon(name="arrow-back")
+		ion-title Solicitud de Servicio
+ion-content(padding-left, padding-right)
+	ion-list
+		p.span Dirección Recojo Paquete
+		ion-item
+			ion-input(ion-text, placeholder="Ingrese dirección", readonly, [(ngModel)]="pickUpPlace.address", (click)="selectPlace('pickup')")
+
+	ion-list
+		p.span Dirección Destino Paquete y Contenido
+		ion-item
+			ion-input(ion-text, placeholder="Ingrese dirección", readonly, [(ngModel)]="dropPlace.address", (click)="selectPlace('drop')")
+		ion-item
+			ion-input(ion-text, placeholder="Referencia dirección", [(ngModel)]="dropPlace.reference")
+		ion-item
+			ion-input(ion-text, placeholder="Contenido paquete", [(ngModel)]="tracking.description")
+			//- ion-label Contenido paquete
+			//- ion-select([(ngModel)]="type", placeholder="Contenido paquete", interface="action-sheet", title="Contenido paquete")
+			//- 	ion-option(value="f") Female
+			//- 	ion-option(value="m") Male
+
+	ion-list
+		ion-item-divider
+			p.span Persona Contacto en Destino
+			ion-icon.animated.pulse.infinite.shadow(name="contacts", item-end, color="primary", (click)="openContacts()")
+		ion-item
+			ion-input(ion-text, placeholder="Nombre persona recibirá paquete", [(ngModel)]="receiver.fullName")
+		ion-item
+			ion-input(ion-text, type="tel", placeholder="Teléfono", [(ngModel)]="receiver.phone")
+		ion-item
+			ion-input(ion-text, type="email", placeholder="E-mail", [(ngModel)]="receiver.email")
+
+	img(*ngIf="mapStatic", [src]="mapStatic")
+
+	ion-item(no-lines)
+		ion-label
+			| Acepto los
+			span  Términos y Condiciones
+		ion-checkbox([(ngModel)]="terminos")
+
+	.center
+		button.shadow.animated.pulse(ion-button, color="wolf", (click)="save()") Enviar Solicitud

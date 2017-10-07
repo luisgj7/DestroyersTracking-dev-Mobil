@@ -1,0 +1,9 @@
+ion-content(padding)
+	ion-list(padding)
+		h1(text-center) Buscando solicitudes de envío ...
+
+		p(text-center, padding-top) Esto puede tomar algunos segundos
+		cs-spinner(data="ball-triangle")
+
+		.center(padding-top)
+			button.shadow.animated.pulse(ion-button, color="wolf", (click)="cancel()") Cancelar

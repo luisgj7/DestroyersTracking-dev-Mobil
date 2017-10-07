@@ -1,0 +1,19 @@
+ion-header(no-border, [csHeaderTransparent]="content", [offset]="240")
+	ion-navbar(color="secondary")
+		button(ion-button, icon-only, menuToggle)
+			ion-icon(name="menu", color="light", [hidden]="showToolbar")
+		ion-title(color="light", [hidden]="showToolbar") Perfil
+		ion-buttons(end)
+			button(ion-button, icon-only, (click)="logout()") Cerrar sesión
+ion-content.content(#content, no-padding, (ionScroll)="onScroll($event)", [class.transition]="transition")
+	.profile-header([ngStyle]="bgStyle")
+	.profile
+		.profile-box
+			ion-img.profile-image([src]="user?.profileImage || UNKNOWN_USER_IMAGE")
+			h3#profile2-name(padding-top) {{ user?.fullName }}
+
+			ion-list
+				button(ion-item, block, clear, text-capitalize, color="clear", (click)="edit()")
+					ion-icon(item-left, name="person", color="dark")
+					span Información Personal
+

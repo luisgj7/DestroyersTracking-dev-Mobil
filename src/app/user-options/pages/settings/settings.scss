@@ -1,0 +1,47 @@
+page-settings {
+    .scroll-content {
+        margin-top: 0 !important;
+        padding-top: 44px;
+    }
+    .toolbar-title {
+        color: white;
+    }
+    .profile-header {
+        position: relative;
+        height: 240px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .profile {
+        position: relative;
+    }
+    .profile-box {
+        position: absolute;
+        padding: 30px !important;
+        top: -95px;
+        width: 100%;
+        z-index: 2;
+        text-align: center;
+    }
+    .profile-image {
+        width: 115px;
+        height: 115px;
+        margin: 0 auto 0;
+        border-width: 3px;
+        border-style: solid;
+        border-color: rgb(255, 255, 255);
+        border-image: initial;
+    }
+    p {
+        color: color($colors, sobra);
+    }
+    #profile2-name {
+        color: color($colors, sobra);
+        font-size: 22px;
+    }
+    .transition {
+        transition: font-size .3s ease-in;
+    }
+}

@@ -1,0 +1,35 @@
+page-request {
+    .span {
+        font-weight: bold;
+    }
+    ion-item {
+        span {
+            color: color($colors, secondary);
+        }
+    }
+    .label-md,
+    .label-ios {
+        margin: 13px 8px 13px 8px;
+    }
+    .select-md,
+    .select-ios {
+        padding: 13px 8px 13px 8px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .checkbox-md,
+    .checkbox-ios {
+        margin-right: 16px !important;
+    }
+    .center {
+        text-align: center;
+    }
+    p.span {
+        font-weight: bold;
+		font-size: 1.6rem;
+		color: color($colors, wolf);
+    }
+    .item-divider-md {
+        padding-left: 0;
+    }
+}

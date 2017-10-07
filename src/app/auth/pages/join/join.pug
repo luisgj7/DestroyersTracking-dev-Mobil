@@ -1,0 +1,23 @@
+ion-content.join-content(text-center)
+
+	.footer-content.btn-holder(ion-fixed)
+		.bottom-content.animated.slideInUp(padding)
+			.list.list-inset
+				ion-item
+					ion-input(type='email', [(ngModel)]="user.email", (ionFocus)="onFocus('email')", placeholder='Correo')
+				ion-item
+					ion-input(type='password', [(ngModel)]="user.password",  (ionFocus)="onFocus('password')", placeholder='Contraseña')
+				ion-item
+					ion-input(type='text', [(ngModel)]="user.fullName",  (ionFocus)="onFocus('password')", placeholder='Nombre')
+				ion-item
+					ion-input(type='telf', [(ngModel)]="user.phone",  (ionFocus)="onFocus('password')", placeholder='Teléfono')
+			button.shadow.animated.fadeIn(ion-button, block, outline, round, color='dark', (click)="join()") Unirse
+			button.animated.fadeIn(ion-button, block, outline, round, color='muted', (click)="gotoLogin()") Tengo una cuenta
+			h6.animated.fadeInUp
+				| Al registrarse, usted acepta nuestros
+				br
+				a((click)="goToTerms()") Términos de Uso
+//- ion-footer([ngStyle]="keyboardHeight")
+//- 	ion-input.animated.fadeIn(*ngIf="showInputEmail && user.email", type='email', [(ngModel)]="user.email", placeholder='Correo')
+//- 	ion-input.animated.fadeIn(*ngIf="showInputUsername && user.username", type='text', [(ngModel)]="user.username", placeholder='Nombre de usuario')
+//- 	ion-input.animated.fadeIn(*ngIf="showInputPassword && user.password", type='password', [(ngModel)]="user.password", placeholder='Contraseña')

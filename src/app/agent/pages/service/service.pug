@@ -1,0 +1,32 @@
+ion-header
+	ion-toolbar
+		//- ion-buttons(left)
+		//- 	button(ion-button, icon-only, (click)="close()")
+		//- 		ion-icon(name="arrow-back")
+		ion-title Servicio de Recojo y Entrega
+ion-content(padding-left, padding-right)
+	ion-list
+		.title
+			p.span Recojo del Paquete
+		.details
+			p {{ tracking.pickup?.address }}
+			p.span Contacto en Origen
+			p {{ tracking.sender?.fullName }}
+			p.span.phone {{ tracking.sender?.phone }}
+			p.span.email {{ tracking.sender?.email }}
+
+	ion-list.destination
+		.title
+			p.span Destino del Paquete
+		.details
+			p {{ tracking.drop?.address }}
+			p {{ tracking.drop?.reference }}
+			p {{ tracking.description}}
+
+			p.span Contacto de Destino
+			p {{ tracking.receiver?.fullName }}
+			p.span.phone {{ tracking.receiver?.phone }}
+			p.span.email {{ tracking.receiver?.email }}
+
+	.center
+		button.shadow.animated.pulse.infinite(ion-button, color="wolf", (click)="next()") Recoger Paquete

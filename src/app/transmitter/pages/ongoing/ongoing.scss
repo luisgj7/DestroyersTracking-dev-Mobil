@@ -1,0 +1,23 @@
+page-ongoing {
+    h1 {
+        color: color($colors, primary);
+    }
+    p {
+        color: color($colors, wolf);
+        &.agent {
+			color: black;
+			font-weight: bold;
+        }
+    }
+    .center {
+        text-align: center;
+    }
+    .list-md,
+    .list-ios {
+        margin-top: 50%;
+    }
+    .button-md,
+    .button-ios {
+        width: 50%;
+    }
+}

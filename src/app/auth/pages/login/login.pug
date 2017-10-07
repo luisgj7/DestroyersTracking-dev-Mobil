@@ -1,0 +1,16 @@
+ion-content.login-content
+	.footer-content.btn-holder(ion-fixed)
+		.bottom-content.animated.slideInUp(padding)
+			.list.list-inset
+				label.item.item-input
+					img(src='assets/img/email-icon.png')
+					input(type='email', [(ngModel)]="user.email", placeholder='Correo', (focus)="onFocus('email')")
+				label.item.item-input
+					img(src='assets/img/lock.png')
+					input(type='password', [(ngModel)]="user.password", (focus)="onFocus('password')", placeholder='Contraseña')
+			button.shadow.loginbtn(ion-button, block, round, color='light', [ngClass]="user.email?['animated', 'pulse']:['hide']", (click)="login()") Iniciar
+			button.shadow(ion-button, block, round, color='light', [ngClass]="!user.email?['animated', 'pulse']:['hide']", (click)="gotoJoin()") Necesito una cuenta
+
+//- ion-footer([ngStyle]="keyboardHeight")
+//- 	ion-input.animated.fadeIn(*ngIf="showInputEmail && user.email", type='email', [(ngModel)]="user.email", placeholder='Correo')
+//- 	ion-input.animated.fadeIn(*ngIf="showInputPassword && user.password", type='password', [(ngModel)]="user.password", placeholder='Contraseña')

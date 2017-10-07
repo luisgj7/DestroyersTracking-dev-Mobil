@@ -1,0 +1,43 @@
+page-pre-tracking {
+    .span {
+        font-weight: bold;
+    }
+    .center {
+        text-align: center;
+    }
+    .title {
+        p {
+            font-size: 2rem;
+        }
+    }
+    .details {
+        padding-left: 2rem;
+    }
+    .phone,
+    .email {
+        color: color($colors, secondary);
+    }
+    h3 {
+		font-size: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+        color: color($colors, primary);
+    }
+    p {
+        color: color($colors, wolf);
+        &.agent {
+            color: black;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        font-size: 1.9rem;
+	}
+	a{
+		padding-top: 2rem;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	h2{
+		color: color($colors, primary);
+	}
+}

@@ -1,0 +1,26 @@
+ion-header
+	ion-toolbar
+		ion-buttons(left)
+			button(ion-button, icon-only, menuToggle)
+				ion-icon(name="menu")
+ion-content(padding)
+	h3(text-center) Su paquete fue entregado!
+	ion-list
+		.title
+			p.span Destino del Paquete
+
+		.title
+			p.span Agente
+
+		p.agent(text-center, padding-bottom)
+			| {{ tracking.agent?.fullName }}
+			br
+			| {{ tracking.car?.model || 'Kia Rop' }}, placa {{ tracking.car?.plate || 'ABC-123'}}
+
+		.title
+			p.span Hora y Prueba de Entrega
+
+		p.agent(text-center, padding-bottom) {{ tracking.modifiedOn }}
+
+	.center
+		img([src]="tracking.pictureDrop || DEFAULT_IMG")

@@ -1,0 +1,15 @@
+page-autocomplete {
+    .toolbar {
+        .searchbar-md {
+            padding: 0;
+        }
+    }
+    h2 {
+        font-weight: bold;
+	}
+	.loader {
+        position: inherit;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}

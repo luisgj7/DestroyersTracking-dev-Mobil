@@ -1,0 +1,31 @@
+ion-content(padding-left, padding-right)
+	h3(text-center) PAQUETE EN TRÁNSITO
+	ion-list
+		.title
+			p.span Recojo del Paquete
+		.details
+			p {{ tracking.pickup?.address }}
+			p.span Contacto en Origen
+			p {{ tracking.sender?.fullName }}
+			p.span.phone {{ tracking.sender?.phone }}
+			p.span.email {{ tracking.sender?.email }}
+
+	ion-list.destination
+		.title
+			p.span Destino del Paquete
+		.details
+			p {{ tracking.drop?.address }}
+			p {{ tracking.drop?.reference }}
+			p {{ tracking.description}}
+
+			p.span Contacto de Destino
+			p {{ tracking.receiver?.fullName }}
+			p.span.phone {{ tracking.receiver?.phone }}
+			p.span.email {{ tracking.receiver?.email }}
+
+	ion-grid
+		ion-row
+			ion-col(col-7)
+				button.shadow.animated.pulse.infinite(ion-button, color="wolf", (click)="finish()") Cerrar Servicio
+			ion-col
+				p (Entregado)

@@ -1,0 +1,19 @@
+ion-header
+	ion-toolbar
+		ion-buttons(left)
+			button(ion-button, icon-only, menuToggle)
+				ion-icon(name="menu")
+		ion-title Tracking Paquete
+ion-content([ngClass]="isActive?'':'hide'")
+	h2
+		| Nro.
+		//- TODO: Change data
+		a(text-uppercase)  {{ payload?.code }}
+	#map
+	h3(color="primary") Tiempo estimado de entrega:
+	//- TODO: Change data
+	h1(color="primary") {{ '22 Minutos' }}
+
+	ion-fab(right, bottom)
+		button(ion-fab, (click)="details()")
+			ion-icon(name="information")

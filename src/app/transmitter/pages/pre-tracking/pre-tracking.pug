@@ -1,0 +1,32 @@
+ion-header
+	ion-toolbar
+		ion-buttons(left)
+			button(ion-button, icon-only, menuToggle)
+				ion-icon(name="menu")
+ion-content(padding)
+	h3(text-center) Su paquete está en tránsito!
+	ion-list
+		.title
+			p.span Destino del Paquete
+		.details
+			p {{ tracking.drop?.address }}
+
+			p.span Contacto de Destino
+			p {{ tracking.receiver?.fullName }}
+			p.span.phone {{ tracking.receiver?.phone }}
+			p.span.email {{ tracking.receiver?.email }}
+
+		.title
+			p.span Agente
+
+		p.agent(text-center, padding-bottom)
+			| {{ tracking.agent?.fullName }}
+			br
+			| {{ tracking.car?.model || 'Kia Rop' }}, placa {{ tracking.car?.plate || 'ABC-123'}}
+
+		h2(text-center)
+			| Puedes hacer seguimiento de tu
+			| paquete con el siguiente código
+			br
+			a(text-uppercase, (click)="next()")  {{ tracking?.code+'  ' }}
+			ion-icon(name="copy", (click)="copy()")

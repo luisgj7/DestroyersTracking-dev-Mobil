@@ -1,0 +1,28 @@
+page-pickup {
+    h1 {
+        color: color($colors, primary);
+    }
+    p {
+        color: color($colors, wolf);
+        &.agent {
+			color: black;
+			font-weight: bold;
+			font-size: 2rem;
+		}
+		margin-top: 5rem;
+		font-size: 1.9rem;
+    }
+    .center {
+        text-align: center;
+    }
+    .list-md,
+    .list-ios {
+        margin-top: 30%;
+    }
+    .button-md,
+    .button-ios {
+		width: 90%;
+		height: 5rem;
+		font-size: 2rem;
+    }
+}

@@ -1,0 +1,19 @@
+ion-split-pane
+	ion-menu([content]="content", (ionOpen)="menuOpened()", (ionClose)="menuClosed()")
+		ion-content.sidemenu
+			ion-list.user(no-lines, no-margin)
+				ion-item(detail-none)
+					ion-avatar(item-left)
+						img([src]="currentUser?.profileImage || tempProfileImage")
+
+					h2(ion-text, text-wrap) {{ currentUser?.fullName }}
+					p(ion-text) {{ currentUser?.email }}
+			ion-item-divider(color="wolf")
+			ion-list.bg-color(no-lines, no-margin)
+				button(ion-item, menuClose,color="wolf", *ngFor="let item of menuItems", (click)="openPage(item)") {{ item.name }}
+					ion-icon(color="empty", [name]="item.icon.name", item-left)
+
+			button.footer(ion-item, color="wolf", (click)="openPage({page: 'SettingsPage'})", detail-none) Perfil
+				ion-icon(color="empty", name="ios-settings", item-left)
+
+	ion-nav([root]="rootPage", main, #content)

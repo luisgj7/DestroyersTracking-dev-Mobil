@@ -1,0 +1,18 @@
+ion-header
+	ion-toolbar
+		ion-searchbar(csAutofocus,
+			placeholder="Ingrese una dirección",
+			(ionInput)="filterPlaces($event)")
+
+		ion-buttons(left)
+			button(ion-button, icon-only, (click)="close()")
+				ion-icon(name="arrow-back")
+
+ion-content
+	.loader
+		cs-progress-spinner([show]="loader")
+	ion-list(no-margin)
+		button(ion-item, block, clear, text-capitalize, *ngFor="let place of places", (click)="select(place)")
+			ion-icon(item-left, name="pin", color="muted")
+			h2 {{ place.text?.main }}
+			p {{ place.text?.secondary }}

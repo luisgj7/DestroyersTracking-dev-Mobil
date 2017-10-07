@@ -1,0 +1,26 @@
+page-finding-request {
+    h1 {
+        color: color($colors, energized);
+    }
+    p {
+        color: color($colors, wolf);
+    }
+    .center {
+        text-align: center;
+    }
+    .list-md,
+    .list-ios {
+        margin-top: 50%;
+    }
+    .button-md,
+    .button-ios {
+        width: 50%;
+    }
+    cs-spinner {
+        img {
+            width: 100px;
+            height: 100px;
+            margin: auto 35%
+        }
+    }
+}

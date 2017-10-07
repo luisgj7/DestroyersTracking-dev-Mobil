@@ -1,0 +1,13 @@
+ion-content(padding)
+	ion-list(padding)
+		h1(text-center) Nuestro agente está en camino!
+
+		p.agent(text-center)
+			| {{ tracking.agent?.fullName }}
+			br
+			| {{ tracking.car?.model || 'Kia Rop' }}, placa {{ tracking.car?.plate || 'ABC-123'}}
+
+		p(text-center, padding-top) Tiempo estimado de llegada 25 minutos
+
+		//- .center(padding-top)
+		//- 	button.shadow.animated.pulse(ion-button, color="wolf", (click)="next()") OK

@@ -1,0 +1,15 @@
+ion-content(padding)
+	ion-list(padding)
+		h1(text-center) Nuestro agente llegó al lugar indicado!
+
+		p.agent(text-center, padding-bottom)
+			| {{ tracking.agent?.fullName }}
+			br
+			| {{ tracking.car?.model || 'Kia Rop' }}, placa {{ tracking.car?.plate || 'ABC-123'}}
+
+		p(text-center, padding-top) Tiempo de espera 10 minutos
+
+		.center(padding-top)
+			button.shadow.animated.pulse(ion-button, color="wolf", (click)="callTo()") Llamar
+		//- .center(padding-top)
+		//- 	button.shadow.animated.pulse(ion-button, color="wolf", (click)="next()") Tracking

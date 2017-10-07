@@ -1,0 +1,16 @@
+page-finish-service {
+    &.ion-page.show-page {
+        width: 90%;
+        margin: 0 5%;
+    }
+    .center {
+        text-align: center;
+	}
+	h2{
+		font-size: 2rem;
+	}
+	.button-md,
+    .button-ios {
+		width: 70%;
+    }
+}

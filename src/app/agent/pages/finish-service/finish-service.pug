@@ -1,0 +1,8 @@
+ion-content(padding)
+	br
+	br
+	h2(text-center) Seleccione una foto de prueba de la entrega del paquete
+
+	.center
+		img([src]="tracking.picture || DEFAULT_IMG", (click)="takePicture()")
+		button.shadow.animated.pulse.infinite(ion-button, color="wolf", (click)="finish()") Cerrar Servicio

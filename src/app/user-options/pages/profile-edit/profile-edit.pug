@@ -1,0 +1,35 @@
+ion-header(no-border, [csHeaderTransparent]="content", [offset]="20")
+    ion-navbar(color="favorite")
+        ion-title Editar
+
+        ion-buttons(left)
+            button(ion-button, icon-only, (click)="close()")
+                ion-icon(name="arrow-back")
+
+        ion-buttons(right)
+            button(ion-button, icon-only, (click)="save()")
+                ion-icon(name="checkmark")
+
+ion-content(#content)
+    ion-list(no-margin, no-lines)
+        .bg-profile( [ngStyle]="bgStyle")
+        ion-item.transparent
+            ion-avatar(item-left)
+                img([src]="tempProfileImage", (csSelectImage)="setProfileImage($event)")
+
+        ion-row(padding-bottom, padding-left, padding-right)
+            ion-col(text-left)
+                span(ion-text, color="light", (csSelectImage)="setProfileImage($event)") Editar
+
+    form([formGroup]="userForm")
+        ion-item-group
+            ion-list
+                ion-item
+                    ion-label(floating) Email
+                    ion-input(type="text", formControlName="email")
+                    ion-icon(item-right, color="muted", name="mail")
+
+                ion-item
+                    ion-label(floating) Nombre
+                    ion-input(type="text", formControlName="fullName")
+                    ion-icon(item-right, color="muted", name="person")

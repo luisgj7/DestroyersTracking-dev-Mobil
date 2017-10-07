@@ -1,0 +1,60 @@
+.sidemenu {
+    background: color($colors, wolf) !important;
+    z-index: 9999;
+    .list-md,
+    .list-ios {
+        margin-bottom: 0;
+    }
+    .user {
+        .item-md,
+        .item-ios {
+            background: color($colors, wolf);
+            color: white;
+            padding-top: 4rem; // padding-bottom: 2rem;
+        }
+        p {
+            color: color($colors, empty);
+        }
+    }
+    .toolbar-background-md,
+    .toolbar-background-ios {
+        background: color($colors, wolf);
+    }
+    .toolbar-background-ios {
+        border: 0;
+    }
+    .bg-color {
+        .item-md-secondary,
+        .item-ios-secondary {
+            background: color($colors, wolf);
+            color: white;
+        }
+    }
+    .footer {
+        position: fixed;
+        background: color($colors, wolf);
+        bottom: 0;
+        color: color($colors, light);
+        border-top: 1px solid color($colors, sobra) !important;
+    }
+    .item-inner {
+        border-bottom: 0 !important;
+    }
+    .item-md ion-avatar ion-img,
+    .item-md ion-avatar img {
+        width: 80px;
+        height: 80px;
+    }
+    .item-md {
+        background: color($colors, wolf);
+        color: color($colors, light);
+    }
+    .sub-menu .item-inner {
+        padding-left: 56px;
+    }
+    .sub-menu {
+        .item-md {
+            background: #202731
+        }
+    }
+}

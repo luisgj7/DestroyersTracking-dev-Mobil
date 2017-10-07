@@ -1,0 +1,71 @@
+page-login {
+    .login-content {
+        background: color($colors, primary);
+        background-image: url('../assets/img/login.png');
+        background-size: 75% auto;
+        background-repeat: no-repeat;
+        background-position: center 30px;
+        input {
+            background: transparent;
+            color: color($colors, dark);
+            font-size: 16px;
+            padding-right: 15px !important;
+            border: none;
+            display: inline-block;
+            margin-bottom: 10px;
+            width: calc(100% - 30px);
+            &::-webkit-input-placeholder {
+                color: grey;
+                font-size: 16px;
+            }
+        }
+        .list {
+            margin: 10px 10px 30px 10px;
+            position: relative;
+        }
+        .item {
+            border: none;
+            border-bottom: 1px solid rgba(161, 166, 187, 0.5);
+            background-color: transparent;
+            color: grey;
+            padding-left: 3px;
+            padding-right: 3px;
+            padding-bottom: 3px;
+            display: block;
+            margin-bottom: 18px;
+            img {
+                width: 12px;
+                margin-right: 10px;
+            }
+        }
+        .footer-content {
+            width: 92%;
+            bottom: 0px;
+            margin-bottom: -1px;
+            .button {
+                width: 200px;
+                margin: 15px auto 0 auto;
+            }
+            .bottom-content {
+                background: color($colors, light);
+                border-top-left-radius: 7px;
+                border-top-right-radius: 7px;
+                padding-bottom: 30px;
+            }
+        }
+        .loginbtn {
+            margin-bottom: 51px !important;
+        }
+    }
+    .footer-md {
+        z-index: 10000;
+        ion-input {
+            background: white;
+            color: color($colors, primary);
+            font-size: 2rem;
+        }
+        .text-input-md {
+            text-align: center;
+        }
+    }
+}

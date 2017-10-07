@@ -1,0 +1,26 @@
+ion-header
+	ion-navbar
+		ion-buttons(left)
+			button(ion-button, icon-only, menuToggle )
+				ion-icon(name="menu")
+		ion-title ¿Que deseas hacer ahora?
+ion-content(padding)
+	ion-list(padding-top)
+		h2 Enviar paquete ...
+		ion-grid
+			ion-row
+				ion-col
+					img(src="./assets/images/enviar.png")
+				ion-col(col-3)
+					button.shadow.animated.jello.infinite(ion-button, round, icon-only, color='primary', (click)="request()")
+						ion-icon(name="arrow-dropright")
+
+	ion-list(padding-top)
+		h2 Llevar paquete ...
+		ion-grid
+			ion-row
+				ion-col
+					img(src="./assets/images/llevar.png")
+				ion-col(col-3)
+					button.shadow.animated.jello.infinite(ion-button, round, icon-only, color='primary', (click)="findingRequest()")
+						ion-icon(name="arrow-dropright")

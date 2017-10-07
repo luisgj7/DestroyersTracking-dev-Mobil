@@ -1,0 +1,9 @@
+cs-spinner {
+    img {
+        &.down {
+            max-height: 0;
+            transition: max-height 0.15s ease-out;
+            overflow: hidden;
+        }
+    }
+}
